@@ -34,6 +34,3 @@ Now you S3 back end is ready use in your terraform resources.
 
 - [@devopswithzack](https://www.github.com/devopswithzack)
 
-
-![Logo](https://github.com/devopswithzack/devopswithzack/blob/main/4x%20Profile%20Picture.png?raw=true)
-
