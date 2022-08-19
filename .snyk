@@ -1,0 +1,10 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-CC-AWS-417:
+    - 'backend/dynamodb.tf [terraform] > resource > aws_dynamodb_table[terraform-lock] > server_side_encryption > kms_key_arn':
+        reason: None Given
+        expires: 2022-09-17T13:25:44.208Z
+        created: 2022-08-18T13:25:44.209Z
+patch: {}
