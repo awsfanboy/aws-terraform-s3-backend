@@ -4,6 +4,13 @@ resource "aws_s3_bucket" "backend-bucket" {
     object_lock_enabled = true
 }
 
+# S3 Bucket Policy
+resource "aws_s3_bucket_public_access_block" "backend-bucket-policy" {
+  bucket = aws_s3_bucket.backend-bucket.id
+
+  block_public_acls       = true
+}
+
 # S3 Server Side Encryption
 resource "aws_s3_bucket_server_side_encryption_configuration" "s3_server_side_encryption" {
   bucket = aws_s3_bucket.backend-bucket.bucket
