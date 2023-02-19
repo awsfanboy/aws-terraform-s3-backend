@@ -2,6 +2,15 @@
 resource "aws_s3_bucket" "backend-bucket" {
     bucket = "${var.aws_profile}-${local.account_id}-terraform-backend"
     object_lock_enabled = true
+    aws_s3_bucket_public_access_block = true
+    block_public_acls = true
+}
+
+# S3 Bucket Policy
+resource "aws_s3_bucket_public_access_block" "backend-bucket-policy" {
+  bucket = aws_s3_bucket.backend-bucket.id
+
+  block_public_acls       = true
 }
 
 # S3 Server Side Encryption
