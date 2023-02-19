@@ -9,6 +9,7 @@ resource "aws_s3_bucket_public_access_block" "backend-bucket-policy" {
   bucket = aws_s3_bucket.backend-bucket.id
 
   block_public_acls       = true
+  block_public_policy     = true
 }
 
 # S3 Server Side Encryption
